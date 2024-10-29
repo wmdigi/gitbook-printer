@@ -97,18 +97,17 @@ class GitbookPrinter {
 
     }
 
-    async _printPage({page, pageUrl, pdfFilePath}) {
+    async _printPage({ page, pageUrl, pdfFilePath }) {
         await page.goto(pageUrl, {
             waitUntil: 'networkidle0'
         });
-        await page.waitForSelector('[aria-current="page"]')
-
         await page.evaluate(() => {
             const style = document.createElement('style');
-            style.textContent = 'header,data-test="headermobile"],[data-test="headerdesktop"] { display: none; }';
-            style.textContent += 'h1 { page-break-before: always }';
+            style.textContent = 'body > header { display: none !important; }';
+            style.textContent += 'h1:not(:first-of-type) { page-break-before: always }';
             document.head.appendChild(style);
         });
+        await page.waitForSelector('[aria-current="page"]')
 
         await page.pdf({
             path: pdfFilePath,
@@ -116,7 +115,6 @@ class GitbookPrinter {
             landscape: false,
             displayHeaderFooter: false,
         });
-
     }
 
     async _getChapterPathList() {
