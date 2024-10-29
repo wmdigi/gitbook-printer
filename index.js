@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 /**
+ * Created by: Wonder Makers s.r.o.
+ * https://wondermakers.digital
  *
- * (c) 2013-2018 Wishtack
- * https://wishtack.io
- *
+ * Forked from: https://github.com/wishtack/gitbook-printer
  */
 
 const addZero = require('add-zero');
@@ -37,9 +37,12 @@ class GitbookPrinter {
         /* Download partial files. */
         const pdfFilePathList = await this._downloadChapterList();
 
+        console.log('Merging all pages together');
+
         /* Merge files. */
         await util.promisify(easyPdfMerge)(pdfFilePathList, path.join(this._outPath, 'gitbook.pdf'));
 
+        console.log('Done!');
     }
 
     async _downloadChapterList() {
@@ -96,9 +99,8 @@ class GitbookPrinter {
     }
 
     async _printPage({page, pageUrl, pdfFilePath}) {
-
         await page.goto(pageUrl, {
-            waitUntil: 'networkidle0'
+            waitUntil: 'networkidle2'
         });
 
         await page.evaluate(() => {
@@ -150,7 +152,13 @@ new GitbookPrinter({
     outPath: commander.out || 'out'
 })
     .savePdf()
-    .catch(console.error);
+    .catch((err) => {
+        console.error(err);
+        process.exit(1);
+    })
+    .then(() => process.exit(0));
+
+
 
 module.exports = {
     GitbookPrinter
