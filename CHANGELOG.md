@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# 0.3.0 (2024-10-29)
+
+
+### Bug Fixes
+
+* 'out' option was ignored. ([f955e78](https://github.com/wmdigi/gitbook-printer/commit/f955e78))
+* Fixed node version. ([d3fb2f4](https://github.com/wmdigi/gitbook-printer/commit/d3fb2f4))
+* Remove trailing slash from base url. ([a58a339](https://github.com/wmdigi/gitbook-printer/commit/a58a339))
+* Stop using experimental modules for more compatibility. ([732db73](https://github.com/wmdigi/gitbook-printer/commit/732db73))
+
+
+### Features
+
+* add more features ([113dba1](https://github.com/wmdigi/gitbook-printer/commit/113dba1))
+
+
+
 <a name="0.1.5"></a>
 ## [0.1.5](https://github.com/wishtack/gitbook-printer/compare/v0.1.4...v0.1.5) (2018-06-19)
 
