@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/wmdigi/gitbook-printer/compare/v0.4.4...v0.5.0) (2024-10-29)
+
+
+### Features
+
+* wait for el ([3103b88](https://github.com/wmdigi/gitbook-printer/commit/3103b88))
+
+
+
 <a name="0.4.4"></a>
 ## [0.4.4](https://github.com/wmdigi/gitbook-printer/compare/v0.4.3...v0.4.4) (2024-10-29)
 
