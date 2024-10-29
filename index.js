@@ -105,7 +105,7 @@ class GitbookPrinter {
 
         await page.evaluate(() => {
             const style = document.createElement('style');
-            style.textContent = '[data-test="headermobile"],[data-test="headerdesktop"] { display: none; }';
+            style.textContent = 'header,data-test="headermobile"],[data-test="headerdesktop"] { display: none; }';
             style.textContent += 'h1 { page-break-before: always }';
             document.head.appendChild(style);
         });
