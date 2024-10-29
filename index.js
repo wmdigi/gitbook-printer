@@ -114,7 +114,6 @@ class GitbookPrinter {
             format: 'A4',
             landscape: false,
             displayHeaderFooter: false,
-            pageRanges: page.url() === pageUrl ? '1-99' : '2-99',
         });
 
     }
