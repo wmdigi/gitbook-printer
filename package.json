@@ -1,6 +1,6 @@
 {
   "name": "@wmdigi/gitbook-printer",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "main": "index.js",
   "license": "MIT",
   "repository": "github:wmdigi/gitbook-printer",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "print": "node index.js",
-    "release": "standard-version && npm publish && git push --follow-tags origin master"
+    "release": "standard-version"
   },
   "dependencies": {
     "add-zero": "^1.0.0",
