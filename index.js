@@ -113,7 +113,9 @@ class GitbookPrinter {
         await page.pdf({
             path: pdfFilePath,
             format: 'A4',
-            landscape: false
+            landscape: false,
+            displayHeaderFooter: false,
+            pageRanges: page.url() === pageUrl ? '1-99' : '2-99',
         });
 
     }
