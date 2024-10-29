@@ -8,12 +8,12 @@ This is a basic tool that will read your **New Gitbook**'s `SUMMARY.md`, crawl y
 
 2. Install gitbook printer.
 ```
-yarn global add @wishtack/gitbook-printer
+yarn global add git+https://github.com/wmdigi/gitbook-printer
 ```
 
 *... or for npm users*
 ```
-npm install -g @wishtack/gitbook-printer
+npm install -g git+https://github.com/wmdigi/gitbook-printer
 ```
 
 3. Run gitbook printer on the gitbook url and **indicate the path to your gitbook's `SUMMARY.md`** on your filesystem. 

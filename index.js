@@ -74,7 +74,6 @@ class GitbookPrinter {
             pdfFilePathList = [...pdfFilePathList, pdfFilePath];
 
             console.debug(`Created: ${pdfFilePath}.`);
-
         }
 
         await browser.close();
@@ -133,7 +132,7 @@ class GitbookPrinter {
             .filter(match => match != null)
             .map(match => match[1])
             /* Remove /README suffix. */
-            .map(url => url.replace(/README$/, ''));
+            .map(url => url.replace(/README$/i, ''));
 
     }
 }
