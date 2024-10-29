@@ -99,8 +99,9 @@ class GitbookPrinter {
 
     async _printPage({page, pageUrl, pdfFilePath}) {
         await page.goto(pageUrl, {
-            waitUntil: 'networkidle2'
+            waitUntil: 'networkidle0'
         });
+        await page.waitForSelector('[aria-current="page"]')
 
         await page.evaluate(() => {
             const style = document.createElement('style');
